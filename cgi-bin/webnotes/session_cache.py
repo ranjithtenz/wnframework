@@ -36,7 +36,7 @@ def get():
 	# run patches
 	try:
 		import webnotes.modules.patch
-		webnotes.modules.patch.run()
+		#webnotes.modules.patch.run()
 	except ImportError, e: 
 		pass # no patches - do nothing
 
