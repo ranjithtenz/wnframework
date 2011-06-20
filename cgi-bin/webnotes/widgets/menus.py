@@ -67,7 +67,8 @@ def get_columns(out, sf, fl, dt, tag_fields):
 		fl = sf
 
 	# subject
-	subject = webnotes.conn.get_value('DocType', dt, 'subject')
+	#subject = webnotes.conn.get_value('DocType', dt, 'subject')
+	subject = None
 	if subject:
 		out['subject'] = subject
 		
@@ -99,7 +100,10 @@ def get_dt_details():
 	"""
 	fl = eval(webnotes.form_dict.get('fl'))
 	dt = webnotes.form_dict.get('dt')
-	tag_fields, description = webnotes.conn.get_value('DocType', dt, ['tag_fields', 'description'])
+	#tag_fields, description = webnotes.conn.get_value('DocType', dt, ['tag_fields', 'description'])
+	
+	description = webnotes.conn.get_value('DocType', dt, ['description'])
+	tag_fields = None	
 
 	submittable = is_submittable(dt) and 1 or 0
  
