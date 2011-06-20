@@ -86,14 +86,16 @@ def listfolders(path, only_name=0):
 
 
 
-
+updated_modules = []
 # ==============================================================================
 # Import from files
 # =============================================================================
 def import_from_files(modules = [], record_list = [], sync_cp = 0, target_db=None, target_ac=None):
 
+	global updated_modules
+	import webnotes.modules.module_manager
 	if target_db or target_ac:
-		init_db_login(target_ac, target_db)
+		webnotes.modules.module_manager.init_db_login(target_ac, target_db)
 
 	from webnotes.utils import transfer
 	# Get paths of folder which will be imported
