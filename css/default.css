@@ -1,3 +1,6 @@
+.disp_area { width: 80%; border: 1px solid #CCC; padding: 2px; font-size: 14px; background-color: #EEE; }
+.disp_area_no_val { width: 80%; border: 1px solid #CCC; padding: 2px; height: 14px; background-color: #EEE; }
+
 html { 
 	margin: 0px;
 	padding: 0px;
@@ -163,6 +166,8 @@ div.dd_item_mo { background-color: #FE8; }
 .btn-img { cursor: pointer; }
 
 div.fetching { color: #888; text-align:right; }
+.disp_area { width: 80%; border: 1px solid #CCC; padding: 2px; font-size: 14px; background-color: #EEE; }
+.disp_area_no_val { width: 80%; border: 1px solid #CCC; padding: 2px; height: 14px; background-color: #EEE; }
 
 div.notice {
 	postion: absolute;
